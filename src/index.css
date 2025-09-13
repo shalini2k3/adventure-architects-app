@@ -193,7 +193,7 @@
   }
   
   .destination-card {
-    @apply travel-card relative group cursor-pointer;
+    @apply travel-card relative cursor-pointer;
   }
   
   /* Hero sections */
