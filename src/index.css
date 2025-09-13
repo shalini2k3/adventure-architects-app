@@ -2,16 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Travel Blog Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Travel-inspired color palette */
+    --background: 45 25% 97%;
+    --foreground: 215 25% 15%;
+    
+    /* Ocean & Sky Blues */
+    --ocean-light: 197 71% 85%;
+    --ocean: 197 71% 65%;
+    --ocean-deep: 197 71% 45%;
+    --sky: 210 100% 88%;
+    --sky-deep: 210 100% 68%;
+    
+    /* Nature Greens */
+    --sage: 120 25% 75%;
+    --sage-deep: 120 25% 55%;
+    --forest: 120 40% 35%;
+    
+    /* Sandy & Earth Tones */
+    --sand: 45 45% 85%;
+    --sand-warm: 35 55% 75%;
+    --earth: 25 35% 65%;
+    
+    /* Sunset Colors */
+    --sunset: 25 85% 75%;
+    --sunset-warm: 15 85% 65%;
+    
+    /* Travel-themed system colors */
     --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    
+    --primary: 197 71% 45%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 120 25% 75%;
+    --secondary-foreground: 215 25% 15%;
+    
+    --muted: 45 45% 95%;
+    --muted-foreground: 215 15% 50%;
+    
+    --accent: 25 85% 75%;
+    --accent-foreground: 215 25% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 45 25% 90%;
+    --input: 45 25% 90%;
+    --ring: 197 71% 45%;
+    
+    --radius: 0.75rem;
+    
+    /* Travel gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--ocean-light)), hsl(var(--ocean-deep)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset)), hsl(var(--sunset-warm)));
+    --gradient-nature: linear-gradient(135deg, hsl(var(--sage)), hsl(var(--forest)));
+    --gradient-sky: linear-gradient(135deg, hsl(var(--sky)), hsl(var(--sky-deep)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ocean) / 0.9), hsl(var(--sky) / 0.8));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(var(--ocean) / 0.1);
+    --shadow-travel: 0 10px 40px -10px hsl(var(--ocean) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--sunset) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
@@ -100,6 +162,61 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+}
+
+@layer components {
+  /* Travel-themed button variants */
+  .btn-travel {
+    @apply bg-gradient-to-r from-ocean to-ocean-deep text-white px-6 py-3 rounded-lg font-medium;
+    @apply shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply hover:scale-105 active:scale-95;
+  }
+  
+  .btn-adventure {
+    @apply bg-gradient-to-r from-sunset to-sunset-warm text-white px-8 py-4 rounded-lg font-semibold;
+    @apply shadow-xl hover:shadow-2xl transition-all duration-300;
+    @apply hover:scale-105 hover:-translate-y-1;
+  }
+  
+  .btn-nature {
+    @apply bg-gradient-to-r from-sage to-sage-deep text-forest px-6 py-3 rounded-lg font-medium;
+    @apply shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  /* Travel cards */
+  .travel-card {
+    @apply bg-card rounded-xl shadow-soft border border-border/50;
+    @apply hover:shadow-travel hover:-translate-y-2 transition-all duration-300;
+    @apply overflow-hidden;
+  }
+  
+  .destination-card {
+    @apply travel-card relative group cursor-pointer;
+  }
+  
+  /* Hero sections */
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-ocean/80 via-sky/60 to-transparent;
+  }
+  
+  /* Travel-themed animations */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
 }

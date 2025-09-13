@@ -19,6 +19,21 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Travel color palette
+        "ocean-light": "hsl(var(--ocean-light))",
+        "ocean": "hsl(var(--ocean))",
+        "ocean-deep": "hsl(var(--ocean-deep))",
+        "sky": "hsl(var(--sky))",
+        "sky-deep": "hsl(var(--sky-deep))",
+        "sage": "hsl(var(--sage))",
+        "sage-deep": "hsl(var(--sage-deep))",
+        "forest": "hsl(var(--forest))",
+        "sand": "hsl(var(--sand))",
+        "sand-warm": "hsl(var(--sand-warm))",
+        "earth": "hsl(var(--earth))",
+        "sunset": "hsl(var(--sunset))",
+        "sunset-warm": "hsl(var(--sunset-warm))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
