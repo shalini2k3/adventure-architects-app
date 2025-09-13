@@ -264,7 +264,7 @@ const ContactSection = () => {
                   <Mail className="w-5 h-5 text-ocean mt-1 flex-shrink-0" />
                   <div>
                     <div className="font-medium text-foreground">Email</div>
-                    <div className="text-muted-foreground">hello@wanderduo.com</div>
+                    <div className="text-muted-foreground">hello@mappedmemories.com</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

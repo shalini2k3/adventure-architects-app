@@ -1,15 +1,15 @@
-import React from 'react';
-import { MapPin, Heart, Instagram, Youtube, Mail, ArrowUp } from 'lucide-react';
+import React from "react";
+import { MapPin, Heart, Instagram, Youtube, Mail, ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -21,33 +21,42 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="relative">
-                <MapPin className="w-8 h-8 text-white" />
-                <Heart className="w-4 h-4 text-sunset absolute -top-1 -right-1" />
+              <div className="relative w-10 h-10">
+                <img
+                  src="/src/assets/Mapped_memories__1_-removebg-preview.png"
+                  alt="logo"
+                  className={`w-full h-full object-contain transition-filter duration-300`}
+                />
               </div>
-              <span className="text-2xl font-bold">WanderDuo</span>
+              <span
+                style={{ fontFamily: "'Henny Penny', cursive" }}
+                className={`text-2xl font-bold transition-colors duration-300`}
+              >
+                Mapped Memories
+              </span>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Two friends sharing budget travel adventures and creating custom itineraries 
-              to help you explore the world without breaking the bank.
+              Two friends sharing budget travel adventures and creating custom
+              itineraries to help you explore the world without breaking the
+              bank.
             </p>
             <div className="flex items-center gap-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                 aria-label="Email"
               >
@@ -60,26 +69,26 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Explore</h3>
             <div className="space-y-2">
-              <button 
-                onClick={() => scrollToSection('about')}
+              <button
+                onClick={() => scrollToSection("about")}
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 About Us
               </button>
-              <button 
-                onClick={() => scrollToSection('blog')}
+              <button
+                onClick={() => scrollToSection("blog")}
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Travel Blog
               </button>
-              <button 
-                onClick={() => scrollToSection('destinations')}
+              <button
+                onClick={() => scrollToSection("destinations")}
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Destinations
               </button>
-              <button 
-                onClick={() => scrollToSection('gallery')}
+              <button
+                onClick={() => scrollToSection("gallery")}
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Photo Gallery
@@ -91,19 +100,28 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Services</h3>
             <div className="space-y-2">
-              <button 
-                onClick={() => scrollToSection('itinerary')}
+              <button
+                onClick={() => scrollToSection("itinerary")}
                 className="block text-white/80 hover:text-white transition-colors"
               >
                 Custom Itineraries
               </button>
-              <a href="#" className="block text-white/80 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="block text-white/80 hover:text-white transition-colors"
+              >
                 Budget Planning
               </a>
-              <a href="#" className="block text-white/80 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="block text-white/80 hover:text-white transition-colors"
+              >
                 Travel Consultation
               </a>
-              <a href="#" className="block text-white/80 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="block text-white/80 hover:text-white transition-colors"
+              >
                 Group Travel
               </a>
             </div>
@@ -113,11 +131,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Stay Updated</h3>
             <p className="text-white/80">
-              Get our latest travel tips and destination guides delivered to your inbox.
+              Get our latest travel tips and destination guides delivered to
+              your inbox.
             </p>
             <div className="space-y-3">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Your email"
                 className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
               />
@@ -154,19 +173,25 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/80 text-sm">
-              © 2024 WanderDuo. All rights reserved. Made with{' '}
-              <Heart className="w-4 h-4 inline-block text-sunset" />{' '}
-              for fellow adventurers.
+              © 2024 Mapped Memories. All rights reserved. Made with{" "}
+              <Heart className="w-4 h-4 inline-block text-sunset" /> for fellow
+              adventurers.
             </div>
-            
+
             <div className="flex items-center gap-6 text-sm">
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-white/80 hover:text-white transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-white/80 hover:text-white transition-colors"
+              >
                 Terms of Service
               </a>
-              <button 
+              <button
                 onClick={scrollToTop}
                 className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group"
               >

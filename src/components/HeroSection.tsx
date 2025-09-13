@@ -44,9 +44,9 @@ const HeroSection = () => {
           {/* Main Heading */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
-              Wander
+              Mapped
               <span className="text-transparent bg-gradient-to-r from-sunset to-sand-warm bg-clip-text">
-                Duo
+                Memories
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
